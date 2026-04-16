@@ -1,0 +1,22 @@
+{
+  "name": "Verilog CPU Dev Environment",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/python:1": {}
+  },
+
+  "postCreateCommand": "sudo apt update && sudo apt install -y iverilog gtkwave make",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "mshr-h.VerilogHDL",
+        "ms-vscode.makefile-tools"
+      ]
+    }
+  },
+
+  "remoteUser": "vscode"
+}
